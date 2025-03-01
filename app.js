@@ -6,7 +6,7 @@ const image=document.querySelector('.weather-icon')
  async function checkWeather(){
     const response=await fetch(url + `&q=${input.value}`+`&appid=${apiKey}`)
     const data= await response.json();
-    console.log(data)
+    
     if(response.status==404){
         document.querySelector('.error').style.display='block';
         document.querySelector('.weather').style.display='none';
